@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PROJECT TWO(2)</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo">
+				<img src="logo.png">
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">PHONE</a></li>
+					<li><a href="#">ACCESSORIES</a></li>
+					<li><a href="#">CART</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="mobile.png" class="mobile">
+			<div id="circle">
+				<div class="feature one">
+					<img src="Focus.png">
+					<div id="camera">
+						<h3>Camera</h3>
+						<p>12MP, Wide Angle Lens </p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src="processsor.png">
+					<div id="processor">
+						<h3>Processor</h3>
+						<p>Snapdragon Octa-core 11nm</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src="Display1.png">
+					<div id="display">
+						<h3>Display</h3>
+						<p>6.5" Mini-Drop Fullscreen</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src="batery.png">
+					<div id="battery">
+						<h3>Battery Life</h3>
+						<p>5000mAh, 720Hrs Standby</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="controls">
+			<img src="down1.png" id="upBtn">
+			<h4 style="color: white; font-family: sans-serif;">Features</h4>
+			<img src="down1.png" id="downBtn">
+		</div>
+	</div>
+	<script>
+		var circle= document.getElementById("circle");
+		var upBtn= document.getElementById("upBtn");
+		var downBtn= document.getElementById("downBtn");
+		var rotateValue= circle.style.transform;
+		var rotateSum;
+
+		upBtn.onclick= function (){
+			rotateSum= rotateValue + "rotate(-90deg)";
+			circle.style.transform= rotateSum;
+			rotateValue= rotateSum;
+		}
+
+		downBtn.onclick= function (){
+			rotateSum= rotateValue + "rotate(90deg)";
+			circle.style.transform= rotateSum;
+			rotateValue= rotateSum;
+		}
+	</script>
+</body>
+</html>   
